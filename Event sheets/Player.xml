@@ -335,6 +335,11 @@
                         <condition id="0" name="On key pressed" sid="418009617976660" type="Keyboard">
                             <param id="0" name="Key">38</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="682902489202028" type="System">
+                            <param id="0" name="First value">Player.WallJumps</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="688513680391232" type="Player">
@@ -343,6 +348,10 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="598953622900769" type="Player">
                             <param id="0" name="Instance variable">Event</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="948649992933704" type="Player">
+                            <param id="0" name="Instance variable">WallJumps</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -422,6 +431,19 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="217366490327972">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="775167538813148" type="System">
+                            <param id="0" name="Interval (seconds)">Player.WallJumpTimer</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="628995350497394" type="Player">
+                            <param id="0" name="Instance variable">WallJumps</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

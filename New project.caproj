@@ -106,6 +106,8 @@
                 <instance-variable comment="Doing some Event" name="Event" sid="509010959119955" type="boolean" />
                 <instance-variable name="WallJump" sid="455285344330522" type="boolean" />
                 <instance-variable name="WallSliding" sid="894759370325435" type="boolean" />
+                <instance-variable name="WallJumps" sid="905846660639350" type="number" />
+                <instance-variable name="WallJumpTimer" sid="461800490396984" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="734211670997994">

@@ -742,6 +742,8 @@
                         <Event>false</Event>
                         <WallJump>false</WallJump>
                         <WallSliding>false</WallSliding>
+                        <WallJumps>0</WallJumps>
+                        <WallJumpTimer>0.6</WallJumpTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
