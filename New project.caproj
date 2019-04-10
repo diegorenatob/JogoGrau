@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -336,13 +337,10 @@
         <object-type name="Text3" sid="335522503880865">
             <plugin id="Text" />
             <behaviors>
-                <behavior-type name="ScrollTo" sid="905952554674806">
-                    <behavior id="scrollto" />
+                <behavior-type name="Anchor" sid="671296414779567">
+                    <behavior id="Anchor" />
                 </behavior-type>
             </behaviors>
-        </object-type>
-        <object-type name="Text4" sid="900623915727489">
-            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
