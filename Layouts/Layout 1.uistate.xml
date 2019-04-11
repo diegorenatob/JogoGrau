@@ -23,11 +23,21 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Floors" />
+    <active-layer name="GUI" />
     <layers>
         <layer locked="1" name="Background 1" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Background 2" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Floors" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Game" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 0" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 1" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 2" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 3" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 4" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 5" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 6" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 7" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 8" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="GUI" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

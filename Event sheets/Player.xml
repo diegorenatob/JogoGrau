@@ -609,11 +609,7 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="122652124887235" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="899269370215357" type="Text4">
-                    <param id="0" name="Text">Player.Event</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
