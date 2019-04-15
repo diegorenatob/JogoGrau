@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Minotauro</name>
+    <events>
+        <event-block sid="775663666548729">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="553018965392549" type="Minotaur">
+                    <param id="0" name="Instance variable">Action</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;right&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="237934341230730" type="Minotaur">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="386710833666147" type="Minotaur">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="664928856518864">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="546540676349881" type="Minotaur">
+                    <param id="0" name="Instance variable">Action</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;left&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="159671907576062" type="Minotaur">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="810676327449787" type="Minotaur">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="663586444823123">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="765011571438719" type="Minotaur">
+                    <param id="0" name="Object">Edge</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="907973355824490">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="510577676009681" type="Minotaur">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="726790974667582" type="Minotaur">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Value">&quot;left&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="963335431426545">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="659270665846236" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="989435005053073" type="Minotaur">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Value">&quot;right&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="742813050448490">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="975492785547731" type="Minotaur">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="495955634816634" type="Minotaur">
+                    <param id="0" name="Instance variable">Action</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;right&quot;</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="869964099046608" type="Minotaur">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="473786323882662" type="Minotaur">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="185789524244934" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375359306716100">
+            <conditions>
+                <condition id="4" name="On finished" sid="765759617589439" type="Minotaur">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="688758170426294" type="Minotaur">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483154157198539">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="928471012777640" type="Minotaur">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="994071924018388" type="Minotaur">
+                    <param id="0" name="Instance variable">Action</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;left&quot;</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="512057500208162" type="Minotaur">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="943130006018830" type="Minotaur">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="701182651972426" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

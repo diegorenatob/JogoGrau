@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level 01</name>
     <events>
+        <include>Wolf</include>
         <include>Worm</include>
         <include>Player</include>
+        <include>Minotauro</include>
     </events>
 </c2eventsheet>

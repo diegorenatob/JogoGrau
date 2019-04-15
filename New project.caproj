@@ -348,8 +348,16 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="Sprite3" sid="244075446753693">
+        <object-type name="Minotaur" sid="244075446753693">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Action" sid="724883125582019" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="710371081799549">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="340714885939068" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -360,6 +368,24 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     <frame duration="1" hotspotX="0.509091" hotspotY="1" />
                     <frame duration="1" hotspotX="0.510204" hotspotY="1" />
+                </animation>
+                <animation framecount="16" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="728498341398439" speed="11">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.741379" hotspotY="0.981818" />
+                    <frame duration="1" hotspotX="0.775862" hotspotY="0.981481" />
+                    <frame duration="1" hotspotX="0.762712" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.79661" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.171429" hotspotY="1.01667" />
+                    <frame duration="1" hotspotX="0.179104" hotspotY="0.982759" />
+                    <frame duration="1" hotspotX="0.184615" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.169231" hotspotY="0.981818" />
+                    <frame duration="1" hotspotX="0.184615" hotspotY="1.02564" />
+                    <frame duration="1" hotspotX="0.188679" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.513514" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -402,6 +428,43 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite4" sid="156163703007467">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="706530755392625" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wolf" sid="459948979225202">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Action" sid="348220406249761" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="724823279084369">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="121703903196404" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511628" hotspotY="1" />
+                    <frame duration="5" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="5" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="6" loop="0" name="Atack" pingpong="0" repeatcount="1" repeatto="0" sid="230797009432108" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511628" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.513514" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -411,6 +474,8 @@
         <event-sheet>Level 01.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
         <event-sheet>Worm.xml</event-sheet>
+        <event-sheet>Wolf.xml</event-sheet>
+        <event-sheet>Minotauro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="13" />
