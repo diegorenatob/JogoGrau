@@ -611,5 +611,46 @@
             </conditions>
             <actions />
         </event-block>
+        <event-group description="" sid="386538659558239" title="WormCollision" />
+        <event-block sid="904077244271548">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="364556613023998" type="Player">
+                    <param id="0" name="Object">Worm</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="724189064585560">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="869871468382174" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Worm.Y</param>
+                        </condition>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="443218791231164" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="579718110175771" type="Worm">
+                            <param id="0" name="Animation">&quot;Die&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="908842471628227" type="Player">
+                            <param id="0" name="Vector Y">-200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="843823448450124">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="678832929547161" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="115260604884044" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

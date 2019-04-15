@@ -17,6 +17,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -122,6 +123,9 @@
                 </behavior-type>
                 <behavior-type name="Timer" sid="361707891651059">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="729228738193745">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -359,6 +363,45 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Worm" sid="814622217765997">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Action" sid="875839820518464" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="887245242583381">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="139671982886492" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.516129" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.518519" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.516129" hotspotY="1" />
+                </animation>
+                <animation framecount="8" loop="0" name="Die" pingpong="0" repeatcount="1" repeatto="0" sid="498051134109245" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.52" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.513514" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Edge" sid="262968128059092">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="195113329462285" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -367,6 +410,7 @@
     <event-folder>
         <event-sheet>Level 01.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
+        <event-sheet>Worm.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="13" />
