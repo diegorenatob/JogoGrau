@@ -641,6 +641,9 @@
                 <event-block sid="843823448450124">
                     <conditions>
                         <condition id="-22" name="Else" sid="678832929547161" type="System" />
+                        <condition id="2" inverted="1" name="Is playing" sid="792933072244031" type="Worm">
+                            <param id="0" name="Animation">&quot;Die&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Flash" id="0" name="Flash" sid="115260604884044" type="Player">
