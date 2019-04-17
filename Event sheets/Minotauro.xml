@@ -176,46 +176,36 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="392251907086382">
+                <event-block any="1" sid="521226395722198">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="555261636368186" type="Minotaur">
+                        <condition id="-8" name="Is boolean instance variable set" sid="755209405596204" type="Player">
                             <param id="0" name="Instance variable">Attacking</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="374249400720568" type="Player">
+                            <param id="0" name="Instance variable">Combo1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="608285631487862" type="Player">
+                            <param id="0" name="Instance variable">Combo2</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="521226395722198">
+                        <event-block sid="657392856398015">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="755209405596204" type="Player">
-                                    <param id="0" name="Instance variable">Attacking</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="374249400720568" type="Player">
-                                    <param id="0" name="Instance variable">Combo1</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="608285631487862" type="Player">
-                                    <param id="0" name="Instance variable">Combo2</param>
+                                <condition id="1" name="Is overlapping another object" sid="860240805433312" type="Player">
+                                    <param id="0" name="Object">Minotaur</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="657392856398015">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="860240805433312" type="Player">
-                                            <param id="0" name="Object">Minotaur</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="734840503133351" type="Minotaur">
-                                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="904552467661616" type="Minotaur">
-                                            <param id="0" name="Instance variable">Running</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="4" name="Set animation" sid="734840503133351" type="Minotaur">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="904552467661616" type="Minotaur">
+                                    <param id="0" name="Instance variable">Running</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
