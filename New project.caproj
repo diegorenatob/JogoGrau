@@ -14,7 +14,6 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -117,6 +116,8 @@
                 <instance-variable name="Combo1" sid="164185271564577" type="boolean" />
                 <instance-variable name="Combo2" sid="628426627634757" type="boolean" />
                 <instance-variable name="AttackCounter" sid="246671104313719" type="number" />
+                <instance-variable name="ComboTimer" sid="947899209149402" type="number" />
+                <instance-variable name="BetweenAttacks" sid="217991387809808" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="734211670997994">
@@ -318,7 +319,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339059423342784" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.338983" original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\1920 x 1080\mountains01_1920x1080_006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.338983" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -472,90 +473,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground" sid="642405935470769">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\512 x 256\mountains01_007.png" />
-        </object-type>
-        <object-type name="TiledBackground2" sid="396275156951902">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\1920 x 1080\mountains01_1920x1080_007.png" />
-        </object-type>
-        <object-type name="TiledBackground3" sid="666146618666253">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\512 x 256\mountains01_003.png" />
-        </object-type>
-        <object-type name="TiledBackground4" sid="936404216964415">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\1920 x 1080\mountains01_1920x1080_003.png" />
-        </object-type>
-        <object-type name="TiledBackground5" sid="162354377564250">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\1920 x 1080\mountains01_1920x1080_004.png" />
-        </object-type>
-        <object-type name="TiledBackground6" sid="138473459067993">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\1920 x 1080\mountains01_1920x1080_004.png" />
-        </object-type>
-        <object-type name="Sprite3" sid="417094057201202">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671088399396765" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="-2.9489" original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Mountain\Mountain 1\1920 x 1080\mountains01_1920x1080_006.png">
-                        <collision-poly>
-                            <point x="0.492196" y="0.00729927" />
-                            <point x="0.507804" y="0.00729927" />
-                            <point x="0.99948" y="0.992701" />
-                            <point x="0.000520291" y="0.992701" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite5" sid="325178804199857">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="476845790999557" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\DeepForestPackNA\DeepForest2x.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Tilemap" sid="107173347666230">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Textures\Textures.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Sprite6" sid="282084170878233">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="113092495435301" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Textures\Textures.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite7" sid="722549048691603">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870035842713016" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rd_25\Documents\GitHub\NoNameGame\Textures\Textures.png">
-                        <collision-poly>
-                            <point x="0.203846" y="0.203846" />
-                            <point x="0.8" y="0.2" />
-                            <point x="0.896154" y="0.5" />
-                            <point x="0.794231" y="0.794231" />
-                            <point x="0.5" y="0.344231" />
-                            <point x="0.111538" y="0.888462" />
-                            <point x="0.803846" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
-        <layout>Level2.xml</layout>
-        <layout>Level3.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Level 01.xml</event-sheet>
@@ -563,8 +484,6 @@
         <event-sheet>Worm.xml</event-sheet>
         <event-sheet>Wolf.xml</event-sheet>
         <event-sheet>Minotauro.xml</event-sheet>
-        <event-sheet>Level2.xml</event-sheet>
-        <event-sheet>Level3.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="13" />
