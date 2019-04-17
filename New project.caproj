@@ -360,6 +360,8 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Action" sid="724883125582019" type="string" />
+                <instance-variable name="Running" sid="439754569976341" type="boolean" />
+                <instance-variable name="Attacking" sid="413961379611086" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="710371081799549">
@@ -461,6 +463,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Action" sid="348220406249761" type="string" />
+                <instance-variable name="Running" sid="557106231820157" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="724823279084369">

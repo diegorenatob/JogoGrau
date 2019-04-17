@@ -10,6 +10,9 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;right&quot;</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="279596463281200" type="Minotaur">
+                    <param id="0" name="Instance variable">Running</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="237934341230730" type="Minotaur">
@@ -26,6 +29,9 @@
                     <param id="0" name="Instance variable">Action</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;left&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="332788907236635" type="Minotaur">
+                    <param id="0" name="Instance variable">Running</param>
                 </condition>
             </conditions>
             <actions>
@@ -98,6 +104,10 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="123314325573881" type="Minotaur">
+                    <param id="0" name="Instance variable">Attacking</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="375359306716100">
@@ -111,6 +121,20 @@
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="607621426361581" type="Minotaur">
+                    <param id="0" name="Instance variable">Attacking</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="501857182581178">
+            <conditions>
+                <condition id="4" name="On finished" sid="678902642785310" type="Minotaur">
+                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="770388831429796" type="Minotaur" />
             </actions>
         </event-block>
         <event-block sid="483154157198539">
@@ -138,7 +162,64 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="541877891325278" type="Minotaur">
+                    <param id="0" name="Instance variable">Attacking</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="391351063814913">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="929225718125378" type="Minotaur">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="392251907086382">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="555261636368186" type="Minotaur">
+                            <param id="0" name="Instance variable">Attacking</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="521226395722198">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="755209405596204" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="374249400720568" type="Player">
+                                    <param id="0" name="Instance variable">Combo1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="608285631487862" type="Player">
+                                    <param id="0" name="Instance variable">Combo2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="657392856398015">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="860240805433312" type="Player">
+                                            <param id="0" name="Object">Minotaur</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="734840503133351" type="Minotaur">
+                                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="904552467661616" type="Minotaur">
+                                            <param id="0" name="Instance variable">Running</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

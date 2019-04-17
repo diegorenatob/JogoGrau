@@ -10,6 +10,9 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;right&quot;</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="990029482427904" type="Wolf">
+                    <param id="0" name="Instance variable">Running</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="910595494261371" type="Wolf">
@@ -26,6 +29,9 @@
                     <param id="0" name="Instance variable">Action</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;left&quot;</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="981358858322499" type="Wolf">
+                    <param id="0" name="Instance variable">Running</param>
                 </condition>
             </conditions>
             <actions>
@@ -86,6 +92,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="893315859587948">
+            <conditions>
+                <condition id="4" name="On finished" sid="511221983658219" type="Wolf">
+                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="251674085015549" type="Wolf" />
+            </actions>
+        </event-block>
         <event-group description="" sid="535817845905578" title="WolfCollision2">
             <sub-events>
                 <event-block sid="900861125395122">
@@ -106,6 +122,9 @@
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="783317578112829" type="Player">
                                     <param id="0" name="Instance variable">Combo2</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="808785187729114" type="Wolf">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -151,7 +170,14 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="982489435337210" type="Wolf" />
+                                        <action id="4" name="Set animation" sid="490647113002374" type="Wolf">
+                                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="548859969712568" type="Wolf">
+                                            <param id="0" name="Instance variable">Running</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
