@@ -777,58 +777,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="386538659558239" title="WormCollision" />
-        <event-block sid="904077244271548">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="364556613023998" type="Player">
-                    <param id="0" name="Object">Worm</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="724189064585560">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="869871468382174" type="Player">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Worm.Y</param>
-                        </condition>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="443218791231164" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="579718110175771" type="Worm">
-                            <param id="0" name="Animation">&quot;Die&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="908842471628227" type="Player">
-                            <param id="0" name="Vector Y">-200</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="843823448450124">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="678832929547161" type="System" />
-                        <condition id="2" inverted="1" name="Is playing" sid="792933072244031" type="Worm">
-                            <param id="0" name="Animation">&quot;Die&quot;</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="455731136009683" type="Player">
-                            <param id="0" name="Instance variable">Attacking</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="115260604884044" type="Player">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
-                        </action>
-                        <action id="2" name="Stop" sid="306618166740142" type="Player" />
-                        <action id="4" name="Set animation" sid="381101938602703" type="Player">
-                            <param id="0" name="Animation">&quot;Hurt&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-group description="" sid="521861472112153" title="Attak">
             <sub-events>
                 <event-block sid="119604153858268">
@@ -851,6 +799,7 @@
                                     <param id="0" name="Instance variable">WallJump</param>
                                 </condition>
                                 <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="512188501359446" type="Player" />
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="697690656124197" type="Player" />
                                 <condition id="-8" name="Compare two values" sid="564480666318393" type="System">
                                     <param id="0" name="First value">Player.BetweenAttacks</param>
                                     <param id="1" name="Comparison">3</param>
@@ -906,7 +855,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="659822680618372" type="Player">
                                             <param id="0" name="Instance variable">ComboTimer</param>
-                                            <param id="1" name="Value">2</param>
+                                            <param id="1" name="Value">4</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="567259764906501" type="Player">
                                             <param id="0" name="Instance variable">BetweenAttacks</param>

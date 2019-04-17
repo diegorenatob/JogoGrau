@@ -73,24 +73,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="390167559567079">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="383184095199299" type="Wolf">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="993324186544280" type="Wolf">
-                    <param id="0" name="Animation">&quot;Atack&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="228747015513176" type="Player">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="719078927738778">
             <conditions>
                 <condition id="4" name="On finished" sid="842759721382246" type="Wolf">
@@ -104,5 +86,79 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="535817845905578" title="WolfCollision2">
+            <sub-events>
+                <event-block sid="900861125395122">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="497703775195460" type="Wolf">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="173695539176705">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="427987354262098" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="928059023122983" type="Player">
+                                    <param id="0" name="Instance variable">Combo1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="783317578112829" type="Player">
+                                    <param id="0" name="Instance variable">Combo2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="993324186544280" type="Wolf">
+                                    <param id="0" name="Animation">&quot;Atack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="228747015513176" type="Player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="557528596095456">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="325344260967437" type="Player">
+                            <param id="0" name="Object">Wolf</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="360098216344609">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="941407502181447" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="792058507688655" type="Player">
+                                    <param id="0" name="Instance variable">Combo1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="581743143186466" type="Player">
+                                    <param id="0" name="Instance variable">Combo2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="639285078054059">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="184530239021275" type="Player">
+                                            <param id="0" name="Object">Wolf</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="982489435337210" type="Wolf" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
