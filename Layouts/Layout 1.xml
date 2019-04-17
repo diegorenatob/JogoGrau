@@ -689,8 +689,6 @@
                         <Combo1>false</Combo1>
                         <Combo2>false</Combo2>
                         <AttackCounter>0</AttackCounter>
-                        <ComboTimer>0</ComboTimer>
-                        <BetweenAttacks>0</BetweenAttacks>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">

@@ -366,6 +366,9 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="522970285061324" type="Player">
                                     <param id="0" name="Instance variable">WallJump</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="365697063731513" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
                                 <condition id="-8" name="Compare two values" sid="485372612656244" type="System">
                                     <param id="0" name="First value">Player.Rollings</param>
                                     <param id="1" name="Comparison">2</param>
@@ -839,90 +842,27 @@
                                     <param id="0" name="Instance variable">WallJump</param>
                                 </condition>
                                 <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="512188501359446" type="Player" />
-                                <condition id="-8" name="Compare two values" sid="564480666318393" type="System">
-                                    <param id="0" name="First value">Player.BetweenAttacks</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="257960759201145" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="433989926268133" type="Player">
                                     <param id="0" name="Instance variable">Event</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="777392934099397">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="357522664955782" type="System">
-                                            <param id="0" name="First value">Player.AttackCounter</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="257960759201145" type="Player">
-                                            <param id="0" name="Instance variable">Attacking</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="705317424058174" type="Player">
-                                            <param id="0" name="Instance variable">ComboTimer</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="186805367046002">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="977902879615379" type="System">
-                                            <param id="0" name="First value">Player.AttackCounter</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="623218211456586" type="Player">
-                                            <param id="0" name="Instance variable">Attacking</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="235039681443407" type="Player">
-                                            <param id="0" name="Instance variable">Combo1</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="659822680618372" type="Player">
-                                            <param id="0" name="Instance variable">ComboTimer</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="956088639759865">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="944188782255011" type="System">
-                                            <param id="0" name="First value">Player.AttackCounter</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="223591767027437" type="Player">
-                                            <param id="0" name="Instance variable">Attacking</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="948385321340038" type="Player">
-                                            <param id="0" name="Instance variable">Combo1</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="258056387881593" type="Player">
-                                            <param id="0" name="Instance variable">Combo2</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="988840699151728">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="168556389871302" type="Player">
                                     <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="177972175583219" type="System">
+                                    <param id="0" name="First value">Player.AttackCounter</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -930,62 +870,28 @@
                                     <param id="0" name="Animation">&quot;Attak1&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="982780711140610" type="Player">
+                                <action id="-10" name="Set value" sid="720524660277721" type="Player">
                                     <param id="0" name="Instance variable">AttackCounter</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="872904379354896">
+                        <event-block sid="186805367046002">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="778320270817231" type="Player">
-                                    <param id="0" name="Instance variable">Combo1</param>
+                                <condition id="-8" name="Compare two values" sid="977902879615379" type="System">
+                                    <param id="0" name="First value">Player.AttackCounter</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="459232985997841" type="Player">
-                                    <param id="0" name="Animation">&quot;Attak2&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="683622707304683" type="Player">
-                                    <param id="0" name="Instance variable">AttackCounter</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="494875932461609">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="223513949519852" type="Player">
-                                    <param id="0" name="Instance variable">Combo2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="510349827698537" type="Player">
-                                    <param id="0" name="Animation">&quot;Attak3&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="461268782538325" type="Player">
-                                    <param id="0" name="Instance variable">AttackCounter</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="528380316452392" type="Player">
-                                    <param id="0" name="Instance variable">Combo2</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block any="1" sid="382504999767675">
+                <event-block sid="382504999767675">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="904392318180759" type="Player">
                             <param id="0" name="Instance variable">Attacking</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="987078617982132" type="Player">
-                            <param id="0" name="Instance variable">Combo1</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="960169620527501" type="Player">
-                            <param id="0" name="Instance variable">Combo2</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -1005,189 +911,17 @@
                             </conditions>
                             <actions>
                                 <action id="2" name="Stop" sid="899382563488857" type="Player" />
+                                <action id="-13" name="Set boolean" sid="385003529802282" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="370518107740153" type="Player">
                                     <param id="0" name="Instance variable">Event</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="306746331148208" type="Player">
-                                    <param id="0" name="Instance variable">Attacking</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="448882633460802" type="Player">
-                                    <param id="0" name="Instance variable">Combo1</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="926883478286095" type="Player">
-                                    <param id="0" name="Instance variable">Combo2</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="617782886515928">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Is playing" sid="798068746603844" type="Player">
-                            <param id="0" name="Animation">&quot;Attak1&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="577217513305215" type="Player">
-                            <param id="0" name="Animation">&quot;Attak2&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="147726240132676" type="Player">
-                            <param id="0" name="Animation">&quot;Attak3&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="267215821438858" type="Player">
-                            <param id="0" name="Instance variable">Attacking</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="245616286341903" type="Player">
-                            <param id="0" name="Instance variable">Combo1</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="818401089717504" type="Player">
-                            <param id="0" name="Instance variable">Combo2</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="846549976930639">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="652031818414449" type="Player">
-                            <param id="0" name="Animation">&quot;Attak1&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="541390199180138" type="Player">
-                            <param id="0" name="Animation">&quot;Attak2&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="559689344836008" type="Player">
-                            <param id="0" name="Animation">&quot;Attak3&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="423449220587125" type="Player">
-                            <param id="0" name="Instance variable">Event</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="305083942946396" type="Player">
-                            <param id="0" name="Instance variable">Attacking</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="479186267203859" type="Player">
-                            <param id="0" name="Instance variable">Combo1</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="644364115057045" type="Player">
-                            <param id="0" name="Instance variable">Combo2</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="593004490118183">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="193221474444651" type="Player">
-                            <param id="0" name="Animation">&quot;Attak2&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="590477886510693" type="Player">
-                            <param id="0" name="Animation">&quot;Attak3&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="241844298096350" type="Player">
-                            <param id="0" name="Instance variable">Event</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="992320535752793" type="Player">
-                            <param id="0" name="Instance variable">Attacking</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="389161591787085" type="Player">
-                            <param id="0" name="Instance variable">Combo1</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="124127649689956" type="Player">
-                            <param id="0" name="Instance variable">Combo2</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="161374194959948">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="559611594577056" type="Player">
-                            <param id="0" name="Animation">&quot;Attak3&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="212699496827180" type="Player">
-                            <param id="0" name="Instance variable">Event</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="436254814005696" type="Player">
-                            <param id="0" name="Instance variable">Attacking</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="544347029013554" type="Player">
-                            <param id="0" name="Instance variable">Combo1</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="415769258867576" type="Player">
-                            <param id="0" name="Instance variable">Combo2</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="247821095170380">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="112939688555061" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="813439042754748" type="Player">
-                            <param id="0" name="Instance variable">ComboTimer</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="447958985486116" type="Player">
-                            <param id="0" name="Instance variable">ComboTimer</param>
-                            <param id="1" name="Value">Player.ComboTimer-1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="300472310348134">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="468559414448393" type="System">
-                                    <param id="0" name="First value">Player.ComboTimer</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="299713541279635" type="Player">
-                                    <param id="0" name="Instance variable">AttackCounter</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="374317831466481">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="919837957388739" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="375281368295525" type="Player">
-                            <param id="0" name="Instance variable">BetweenAttacks</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="961288913690160" type="Player">
-                            <param id="0" name="Instance variable">BetweenAttacks</param>
-                            <param id="1" name="Value">Player.BetweenAttacks-1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
