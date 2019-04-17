@@ -83,5 +83,100 @@
                 <action id="-9" name="Destroy" sid="270107470822011" type="Worm" />
             </actions>
         </event-block>
+        <event-group description="" sid="215847698709689" title="WormCollision">
+            <sub-events>
+                <event-block sid="146809083101094">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="607815765483055" type="Player">
+                            <param id="0" name="Object">Worm</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="887697946650640">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="213881446070744" type="Player">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Worm.Y</param>
+                                </condition>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="876641725220658" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="588865814989579" type="Worm">
+                                    <param id="0" name="Animation">&quot;Die&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="933025251656688" type="Player">
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999583298593434">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="224854516725787" type="System" />
+                                <condition id="2" inverted="1" name="Is playing" sid="766187239581735" type="Worm">
+                                    <param id="0" name="Animation">&quot;Die&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="480738696698717" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="330854155601114" type="Player">
+                                    <param id="0" name="Instance variable">Combo1</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="878618108183284" type="Player">
+                                    <param id="0" name="Instance variable">Combo2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="689242204139782" type="Player">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="718207343343752">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="517348234539385" type="Player">
+                            <param id="0" name="Object">Worm</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="983574054903252">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="312172283010323" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="799642417902356" type="Player">
+                                    <param id="0" name="Instance variable">Combo1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="921208104024510" type="Player">
+                                    <param id="0" name="Instance variable">Combo2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="597019172979562">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="147830107996490" type="Player">
+                                            <param id="0" name="Object">Worm</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="630248385123412" type="Worm">
+                                            <param id="0" name="Animation">&quot;Die&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
