@@ -397,7 +397,7 @@
                 </instance>
                 <instance type="Text2" uid="18">
                     <properties>
-                        <text>Flecha Abajo</text>
+                        <text>Z</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,255,255</color>
@@ -424,7 +424,7 @@
                 </instance>
                 <instance type="Text2" uid="19">
                     <properties>
-                        <text>Para Agacharte</text>
+                        <text>Para Rodar</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,255,255</color>
@@ -805,94 +805,7 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Wolf" uid="32">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Action>right</Action>
-                        <Running>true</Running>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>80</max-speed>
-                                <acceleration>100</acceleration>
-                                <deceleration>100</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>809.178039551</x>
-                        <y>437.234619141</y>
-                        <z>0</z>
-                        <width>44</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Edge" uid="33">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1068.81262207</x>
-                        <y>411.689941406</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Edge" uid="34">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>748.002746582</x>
-                        <y>415.447021484</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="Layer 2" sid="352797746494370">
@@ -1071,156 +984,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Minotaur" uid="28">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Action>right</Action>
-                        <Running>true</Running>
-                        <Attacking>false</Attacking>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>40</max-speed>
-                                <acceleration>100</acceleration>
-                                <deceleration>100</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>183.164108276</x>
-                        <y>429.126922607</y>
-                        <z>0</z>
-                        <width>54</width>
-                        <height>46</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Worm" uid="29">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Action>right</Action>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>50</max-speed>
-                                <acceleration>100</acceleration>
-                                <deceleration>100</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>364.982025146</x>
-                        <y>423.96182251</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>10</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Edge" uid="30">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>96.764816284</x>
-                        <y>415.696014404</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Edge" uid="31">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>421.238494873</x>
-                        <y>415.82434082</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Edge" uid="35">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>284.593048096</x>
-                        <y>415.695983887</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
