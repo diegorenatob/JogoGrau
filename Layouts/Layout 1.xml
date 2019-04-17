@@ -672,6 +672,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Idle>false</Idle>
                         <Runing>false</Runing>
                         <RunSpeed>150</RunSpeed>
                         <Rolling>false</Rolling>
@@ -683,6 +684,11 @@
                         <WallSliding>false</WallSliding>
                         <WallJumps>0</WallJumps>
                         <WallJumpTimer>0.6</WallJumpTimer>
+                        <Attacking>false</Attacking>
+                        <AirAttacking>false</AirAttacking>
+                        <Combo1>false</Combo1>
+                        <Combo2>false</Combo2>
+                        <AttackCounter>0</AttackCounter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -871,8 +877,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>701.420959473</x>
-                        <y>411.689910889</y>
+                        <x>748.002746582</x>
+                        <y>415.447021484</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -1095,8 +1101,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>222.232818604</x>
-                        <y>431.380737305</y>
+                        <x>183.164108276</x>
+                        <y>429.126922607</y>
                         <z>0</z>
                         <width>54</width>
                         <height>46</height>
@@ -1136,8 +1142,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>416.07144165</x>
-                        <y>427.718933105</y>
+                        <x>364.982025146</x>
+                        <y>423.96182251</y>
                         <z>0</z>
                         <width>32</width>
                         <height>10</height>
@@ -1158,8 +1164,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96.013153076</x>
-                        <y>409.685089111</y>
+                        <x>96.764816284</x>
+                        <y>415.696014404</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -1180,8 +1186,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>483.598144531</x>
-                        <y>415.071533203</y>
+                        <x>421.238494873</x>
+                        <y>415.82434082</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -1202,8 +1208,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>361.227172852</x>
-                        <y>411.940032959</y>
+                        <x>284.593048096</x>
+                        <y>415.695983887</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>

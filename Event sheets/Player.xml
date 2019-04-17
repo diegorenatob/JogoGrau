@@ -14,7 +14,7 @@
                             <param id="0" name="Side">0</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="447590056628817" type="Player">
-                            <param id="0" name="Instance variable">WallSliding</param>
+                            <param id="0" name="Instance variable">Event</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -32,7 +32,7 @@
                             <param id="0" name="Side">1</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="848791677378956" type="Player">
-                            <param id="0" name="Instance variable">WallSliding</param>
+                            <param id="0" name="Instance variable">Event</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -57,6 +57,10 @@
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="758774755117013" type="Player">
+                            <param id="0" name="Instance variable">Idle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="200896592422619">
@@ -69,6 +73,10 @@
                         <action id="4" name="Set animation" sid="702432227929296" type="Player">
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="348158314268610" type="Player">
+                            <param id="0" name="Instance variable">Idle</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -88,26 +96,101 @@
                             <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="350988427240432" type="Player">
+                            <param id="0" name="Instance variable">Idle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="811004155211542">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="803221434390239" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="672748158391075" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="478121749302111" type="Player">
+                            <param id="0" name="Instance variable">Rolling</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="550911815002634" type="Player">
+                            <param id="0" name="Instance variable">Idle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="362503150846544">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="391567664114468" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="704271723264881" type="Player">
+                            <param id="0" name="Instance variable">WallSliding</param>
+                        </condition>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="625425626299243" type="Player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="764141191190618" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="625300579195624" type="Player" />
+                        <action id="4" name="Set animation" sid="562760486280117" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="836586620723314" type="Player">
+                            <param id="0" name="Instance variable">Idle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="699160243346345" type="Player">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="847139176790819">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="863261665018180" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="282079650796191" type="Player">
+                            <param id="0" name="Instance variable">WallSliding</param>
+                        </condition>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="537669063679158" type="Player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="587039120648237" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="143493728754840" type="Player" />
+                        <action id="4" name="Set animation" sid="305919830867361" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="618064890952864" type="Player">
+                            <param id="0" name="Instance variable">Idle</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="217840083751406" type="Player">
+                            <param id="0" name="Input">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="486800045638094" title="Run">
             <sub-events>
-                <event-block sid="873873968332308">
+                <event-block sid="762234313595560">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="463951718896131" type="Player" />
-                        <condition behavior="Platform" id="0" name="Is moving" sid="915628760010312" type="Player" />
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="531978727418213" type="Player">
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="145753048143886" type="Player" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="468632993002002" type="Player" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="439549688462712" type="Player">
                             <param id="0" name="Instance variable">Event</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="689738315294583" type="Player">
+                        <action id="4" name="Set animation" sid="216972331733119" type="Player">
                             <param id="0" name="Animation">&quot;Run&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="534976503649667" type="Player">
+                        <action id="-13" name="Set boolean" sid="568472195255711" type="Player">
                             <param id="0" name="Instance variable">Runing</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -115,45 +198,105 @@
                 </event-block>
                 <event-block sid="635105701727249">
                     <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="954128084117228" type="Player">
-                            <param id="0" name="Side">1</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="180984986216515" type="Player">
-                            <param id="0" name="Instance variable">Runing</param>
+                        <condition id="2" name="Key is down" sid="930828750033758" type="Keyboard">
+                            <param id="0" name="Key">39</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="496568640119242" type="Player">
                             <param id="0" name="Instance variable">Event</param>
                         </condition>
-                        <condition id="2" name="Key is down" sid="930828750033758" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="647211054015590" type="Player" />
                     </conditions>
                     <actions>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="655042113850264" type="Player">
+                            <param id="0" name="Input">0</param>
+                        </action>
                         <action id="4" name="Set animation" sid="278536803277828" type="Player">
                             <param id="0" name="Animation">&quot;Run&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="715739311955927" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="886133653791111">
                     <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="587054769580931" type="Player">
-                            <param id="0" name="Side">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="777458534430350" type="Player">
-                            <param id="0" name="Instance variable">Runing</param>
+                        <condition id="2" name="Key is down" sid="803724674736028" type="Keyboard">
+                            <param id="0" name="Key">37</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="704025989308438" type="Player">
                             <param id="0" name="Instance variable">Event</param>
                         </condition>
-                        <condition id="2" name="Key is down" sid="803724674736028" type="Keyboard">
-                            <param id="0" name="Key">37</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="328569316829609" type="Player">
+                            <param id="0" name="Instance variable">WallSliding</param>
                         </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="171460161351680" type="Player" />
                     </conditions>
                     <actions>
+                        <action behavior="Platform" id="0" name="Set ignoring input" sid="262631427969706" type="Player">
+                            <param id="0" name="Input">0</param>
+                        </action>
                         <action id="4" name="Set animation" sid="951182742899325" type="Player">
                             <param id="0" name="Animation">&quot;Run&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="927582498035137" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="321634473520582">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is playing" sid="292880161533156" type="Player">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="881015455754963" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="704373618336830">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="820826433766997" type="Player">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="727502396786425" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="105281211574370" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="982584071151949" type="Player" />
+                        <action id="-13" name="Set boolean" sid="180842828337813" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="368313351499982">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="922425819102000" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="615388192754777" type="Player">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="276918795904494" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="801915630800711" type="Player" />
+                        <action id="-13" name="Set boolean" sid="511739994000367" type="Player">
+                            <param id="0" name="Instance variable">Runing</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -189,6 +332,9 @@
                         <condition id="2" inverted="1" name="Key is down" sid="556106274391193" type="Keyboard">
                             <param id="0" name="Key">37</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="360217619934055" type="Player">
+                            <param id="0" name="Instance variable">Event</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="811787669247206" type="Player">
@@ -216,6 +362,12 @@
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="929898289288616" type="Player">
                                     <param id="0" name="Instance variable">WallSliding</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="522970285061324" type="Player">
+                                    <param id="0" name="Instance variable">WallJump</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="365697063731513" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
                                 </condition>
                                 <condition id="-8" name="Compare two values" sid="485372612656244" type="System">
                                     <param id="0" name="First value">Player.Rollings</param>
@@ -418,6 +570,7 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="110843576156378" type="Player">
                                     <param id="0" name="Animation">&quot;CornerJump&quot;</param>
                                 </condition>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="595173575300737" type="Player" />
                             </conditions>
                             <actions>
                                 <action id="-13" name="Set boolean" sid="811641150780783" type="Player">
@@ -472,8 +625,8 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="703802877107866" type="Player">
                                             <param id="0" name="Instance variable">Rolling</param>
                                         </condition>
-                                        <condition behavior="Platform" id="10" name="Is by wall" sid="266227147572995" type="Player">
-                                            <param id="0" name="Side">1</param>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="257312987555620" type="Player">
+                                            <param id="0" name="Instance variable">Idle</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -521,8 +674,8 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="152703571823561" type="Player">
                                             <param id="0" name="Instance variable">Rolling</param>
                                         </condition>
-                                        <condition behavior="Platform" id="10" name="Is by wall" sid="578588591980079" type="Player">
-                                            <param id="0" name="Side">0</param>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="292092527456178" type="Player">
+                                            <param id="0" name="Instance variable">Idle</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -583,17 +736,14 @@
             <sub-events>
                 <event-block sid="154085802542323">
                     <conditions>
-                        <condition id="4" name="On finished" sid="747898442880832" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                        </condition>
                         <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="885392055161421" type="Player" />
                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="793009200636051" type="Player" />
                         <condition behavior="Platform" id="4" name="Is falling" sid="146591631628821" type="Player" />
-                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="917649580551366" type="Player">
-                            <param id="0" name="Side">0</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="808273127052699" type="Player">
+                            <param id="0" name="Instance variable">WallSliding</param>
                         </condition>
-                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="731515855839922" type="Player">
-                            <param id="0" name="Side">1</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="857383275673217" type="Player">
+                            <param id="0" name="Instance variable">Rolling</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -603,14 +753,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="302264512743108">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="840895410246356" type="Player">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="790364803078275" type="Player">
+                            <param id="0" name="Animation">&quot;Fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="969886915135038">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="122652124887235" type="System" />
-            </conditions>
-            <actions />
-        </event-block>
         <event-group description="" sid="386538659558239" title="WormCollision" />
         <event-block sid="904077244271548">
             <conditions>
@@ -644,6 +801,9 @@
                         <condition id="2" inverted="1" name="Is playing" sid="792933072244031" type="Worm">
                             <param id="0" name="Animation">&quot;Die&quot;</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="455731136009683" type="Player">
+                            <param id="0" name="Instance variable">Attacking</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Flash" id="0" name="Flash" sid="115260604884044" type="Player">
@@ -651,9 +811,120 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
+                        <action id="2" name="Stop" sid="306618166740142" type="Player" />
+                        <action id="4" name="Set animation" sid="381101938602703" type="Player">
+                            <param id="0" name="Animation">&quot;Hurt&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="521861472112153" title="Attak">
+            <sub-events>
+                <event-block sid="119604153858268">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="723687386060887" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="792078694083813">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="780046643405178" type="Player">
+                                    <param id="0" name="Instance variable">Rolling</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="875679590210369" type="Player">
+                                    <param id="0" name="Instance variable">WallSliding</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="768237813331468" type="Player">
+                                    <param id="0" name="Instance variable">WallJump</param>
+                                </condition>
+                                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="512188501359446" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="257960759201145" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="433989926268133" type="Player">
+                                    <param id="0" name="Instance variable">Event</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="988840699151728">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="168556389871302" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="177972175583219" type="System">
+                                    <param id="0" name="First value">Player.AttackCounter</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="418149015169623" type="Player">
+                                    <param id="0" name="Animation">&quot;Attak1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="720524660277721" type="Player">
+                                    <param id="0" name="Instance variable">AttackCounter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="186805367046002">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="977902879615379" type="System">
+                                    <param id="0" name="First value">Player.AttackCounter</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="382504999767675">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="904392318180759" type="Player">
+                            <param id="0" name="Instance variable">Attacking</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="511358589968717">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="993041751481083" type="Player">
+                                    <param id="0" name="Instance variable">Rolling</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="271930124951526" type="Player">
+                                    <param id="0" name="Instance variable">WallSliding</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="872446256876019" type="Player">
+                                    <param id="0" name="Instance variable">WallJump</param>
+                                </condition>
+                                <condition behavior="Platform" id="3" name="Is jumping" sid="424043683345975" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="899382563488857" type="Player" />
+                                <action id="-13" name="Set boolean" sid="385003529802282" type="Player">
+                                    <param id="0" name="Instance variable">Attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="370518107740153" type="Player">
+                                    <param id="0" name="Instance variable">Event</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="389969501886594" title="Air Attak" />
     </events>
 </c2eventsheet>

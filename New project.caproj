@@ -99,6 +99,7 @@
         <object-type name="Player" sid="755625421246963">
             <plugin id="Sprite" />
             <instance-variables>
+                <instance-variable name="Idle" sid="952016977747126" type="boolean" />
                 <instance-variable name="Runing" sid="346712158577794" type="boolean" />
                 <instance-variable name="RunSpeed" sid="378416924506445" type="number" />
                 <instance-variable name="Rolling" sid="883477509208705" type="boolean" />
@@ -110,6 +111,11 @@
                 <instance-variable name="WallSliding" sid="894759370325435" type="boolean" />
                 <instance-variable name="WallJumps" sid="905846660639350" type="number" />
                 <instance-variable name="WallJumpTimer" sid="461800490396984" type="number" />
+                <instance-variable name="Attacking" sid="179529469918784" type="boolean" />
+                <instance-variable name="AirAttacking" sid="206277149984991" type="boolean" />
+                <instance-variable name="Combo1" sid="164185271564577" type="boolean" />
+                <instance-variable name="Combo2" sid="628426627634757" type="boolean" />
+                <instance-variable name="AttackCounter" sid="246671104313719" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="734211670997994">
@@ -171,14 +177,14 @@
                     <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-fall-00.png" />
                     <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-fall-01.png" />
                 </animation>
-                <animation framecount="5" loop="0" name="Attak1" pingpong="0" repeatcount="1" repeatto="0" sid="487049597249265" speed="5">
+                <animation framecount="5" loop="0" name="Attak1" pingpong="0" repeatcount="1" repeatto="0" sid="487049597249265" speed="10">
                     <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack1-00.png" />
                     <frame duration="1" hotspotX="0.518519" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack1-01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack1-02.png" />
                     <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack1-03.png" />
                     <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack1-04.png" />
                 </animation>
-                <animation framecount="6" loop="0" name="Attak2" pingpong="0" repeatcount="1" repeatto="0" sid="387077903536420" speed="5">
+                <animation framecount="6" loop="0" name="Attak2" pingpong="0" repeatcount="1" repeatto="0" sid="387077903536420" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack2-00.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack2-01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack2-02.png" />
@@ -186,7 +192,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack2-04.png" />
                     <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack2-05.png" />
                 </animation>
-                <animation framecount="6" loop="0" name="Attak3" pingpong="0" repeatcount="1" repeatto="0" sid="876262887395186" speed="5">
+                <animation framecount="6" loop="0" name="Attak3" pingpong="0" repeatcount="1" repeatto="0" sid="876262887395186" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack3-00.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack3-01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Descargas\assets\Proyecto Parcial\player\Individual Sprites\adventurer-attack3-02.png" />
