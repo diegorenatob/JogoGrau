@@ -117,6 +117,8 @@
                 <instance-variable name="Combo1" sid="164185271564577" type="boolean" />
                 <instance-variable name="Combo2" sid="628426627634757" type="boolean" />
                 <instance-variable name="AttackCounter" sid="246671104313719" type="number" />
+                <instance-variable name="ComboTimer" sid="947899209149402" type="number" />
+                <instance-variable name="BetweenAttacks" sid="217991387809808" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="734211670997994">
